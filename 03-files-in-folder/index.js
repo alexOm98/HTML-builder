@@ -11,13 +11,12 @@ fs.readdir(path.join(__dirname, 'secret-folder'), { withFileTypes: true }, (err,
         fs.stat(path.join(__dirname, 'secret-folder', file.name), (err, stats) => {
           if (err) throw err;
           else{
-            result.push(stats.size + ' bytes');
+            result.push(stats.size + 'bytes');
             console.log(result.join(' - '));
           } 
         });
       }
     });
-
   }
 });
 
